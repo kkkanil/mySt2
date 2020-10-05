@@ -570,6 +570,11 @@ requirements: virtualenv .requirements .sdist-requirements install-runners insta
 	# make targets. This speeds up the build
 	(cd ${ROOT_DIR}/st2auth; ${ROOT_DIR}/$(VIRTUALENV_DIR)/bin/python setup.py develop --no-deps)
 
+	# A number of workflow use cases such as parallel branches, join, and with items task require
+	# coordination service to be setup. Redis server is used as the default backend for the
+	# coordination service.
+	$(VIRTUALENV_DIR)/bin/pip install redis
+
 	# Some of the tests rely on submodule so we need to make sure submodules are check out
 	git submodule update --recursive --remote
 
