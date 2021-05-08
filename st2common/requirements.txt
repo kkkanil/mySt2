@@ -1,7 +1,7 @@
 # Don't edit this file. It's generated automatically!
 apscheduler==3.5.3
 cryptography==2.4.1
-eventlet==0.24.1
+eventlet==0.31.0
 flex==6.13.2
 git+https://github.com/StackStorm/orquesta.git@2e5cad1df13836459b8ae9273c75c73d7547c60d#egg=orquesta
 greenlet==0.4.15
